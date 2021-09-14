@@ -1,54 +1,51 @@
-# Windows 11 WSL2/WSLg Fedora 34 yükleme
+# Windows 11 WSL2/WSLg Arch Linux yükleme
 
 **WSL2 İçin gerekli adımları yapmış varsayınalarak hazırlandı bu video bilginize**
 
 ## İndirme Sayfaları
 
-- [Fedora Container Sayfası](https://koji.fedoraproject.org/koji/packageinfo?packageID=26387)
+- [ArchWSL Projesinin Github Sayfası](https://github.com/yuk7/ArchWSL)
 
-- [Direkt Fedora-Container-Base-34-20210914.0.x86_64.tar.xz indirme](Fedora-Container-Base-34-20210914.0.x86_64.tar.xz)
+- [ArchWSL-AppX_21.8.28.0_x64.appx](https://github.com/yuk7/ArchWSL/releases/download/21.8.28.0/ArchWSL-AppX_21.8.28.0_x64.appx)
+
+- [ArchWSL-AppX_21.8.28.0_x64.cer (Sertifika)](https://github.com/yuk7/ArchWSL/releases/download/21.8.28.0/ArchWSL-AppX_21.8.28.0_x64.cer)
+
+- [ArchWSL Relase 21.8.28.0](https://github.com/yuk7/ArchWSL/releases/tag/21.8.28.0)
 
 **UYARI: WSLg Sadece Windows 11 de çalışıyor şuanlık windows 10 ilerliyen zaman belki gelebilir.**
+
 # Sırasıyla Komutlar
 
-- ## 1- PowerShell Komutları
+- ## 1- Bash Komutları
 
-> `mkdir DağıtımınDepolancağıKonum`
-
-> `wsl --import Dağıtımİsmi DağıtımınDepolancağıKonum DağıtımınİçindekiLayer.tarDosyasınKonumu`
-
-> `wsl -d Dağıtımİsmi` 
-
-```powershell
-mkdir $HOME\wsl2\fedora
-wsl --import fedora $HOME\wsl2\fedora layer.tar
-wsl -d fedora
-```
-
-- ## 2- Bash Komutları
 > `grau` diye adlandırdığım kısımlara kendi kullanıcı adınızı yazıcaksınız.
+
 ```bash
-sudo dnf install -y passwd cracklib-dicts iputils util-linux-user
-useradd -G whell grau
+pacman -Syy && pacman -Syu
+pacman-key --init && pacman-key --populate
+pacman -Syu
+useradd -mg users -G storage,wheel,power -s /bin/bash grau
 passwd grau
-logout
 ```
 
-- ## 3- PowerShell komutları
+> sudoers dosyasından gerekli dosyaları # kaldırmalısınız.
+
+> `%whell ALL=(ALL) ALL` adlı yazının başındaki `#` kaldırmalısınız tam uyuştundan emin olun kelimenin.
+
+```bash
+nano /etc/sudoers
+```
+
+- ## 2- PowerShell Komutları
+
 > `grau` diye adlandırdığım kısımlara kendi kullanıcı adınızı yazıcaksınız.
 
 ```bash
-wsl -d fedora -u grau
-```
-
-
-## 3 Parti Depoyu aktifleştirmek (rpmfusion depo)
-```bash
-sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf update
+Arch.exe config --default-user grau
 ```
 
 # WSLg için yüklemeniz gereken paketler
 *Normal Şartlarda Gerek yok*
 
 ### Youtube Videosu:
-https://youtu.be/_8uhiseVfHA
+https://youtu.be/X-eC0oVhflA
