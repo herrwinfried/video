@@ -5,7 +5,7 @@
 ## İndirme Sayfaları
 - [OpenSUSE Tumbleweed İndirme Sayfası](https://download.opensuse.org/tumbleweed/appliances/) 
 
-- [OpenSUSE Sertifikası için indirmeniz gereken sayfa](https://build.opensuse.org/package/view_file/openSUSE:Factory/shim/openSUSE-UEFI-CA-Certificate.crt?expand=1) || [Direkt sertifika Dosyasını indir]()
+- [OpenSUSE Sertifikası için indirmeniz gereken sayfa](https://build.opensuse.org/package/view_file/openSUSE:Factory/shim/openSUSE-UEFI-CA-Certificate.crt?expand=1) || [Direkt sertifika Dosyasını indir](https://github.com/herrwinfried/video/releases/download/sertifika/openSUSE-UEFI-CA-Certificate.crt)
 
 **UYARI: WSLg Sadece Windows 11 de çalışıyor şuanlık windows 10 ilerliyen zaman belki gelebilir.**
 
