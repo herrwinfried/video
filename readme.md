@@ -7,7 +7,7 @@
 
 - [OpenSUSE Sertifikası için indirmeniz gereken sayfa](https://build.opensuse.org/package/view_file/openSUSE:Factory/shim/openSUSE-UEFI-CA-Certificate.crt?expand=1) || [Direkt sertifika Dosyasını indir](https://github.com/herrwinfried/video/releases/download/sertifika/openSUSE-UEFI-CA-Certificate.crt)
 
-- [Direkt openSUSE-Tumbleweed-20210910-WSL.x86_64-21253.2.167.0-Snapshot20210910.appx indir](https://download.opensuse.org/tumbleweed/appliances/openSUSE-Tumbleweed-20210910-WSL.x86_64-21253.2.167.0-Snapshot20210910.appx) || [Direkt sertifika Dosyasını indir](https://github.com/herrwinfried/video/releases/download/sertifika/openSUSE-UEFI-CA-Certificate.crt)
+- [Direkt openSUSE-Tumbleweed-20210929-WSL.x86_64-21272.2.241.0-Snapshot20210929.appx indir](https://download.opensuse.org/tumbleweed/appliances/openSUSE-Tumbleweed-20210929-WSL.x86_64-21272.2.241.0-Snapshot20210929.appx) || [Direkt sertifika Dosyasını indir](https://github.com/herrwinfried/video/releases/download/sertifika/openSUSE-UEFI-CA-Certificate.crt)
 
 **UYARI: WSLg Sadece Windows 11 de çalışıyor şuanlık windows 10 ilerliyen zaman belki gelebilir.**
 
