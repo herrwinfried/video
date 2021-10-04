@@ -36,3 +36,4 @@ nano /etc/sudoers
 ```
 Arch.exe config --default-user USERNAME
 ```
+https://youtu.be/Kcvh36UdLXY
