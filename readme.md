@@ -27,3 +27,4 @@ wsl --import fedora $HOME\wsl2\fedora layer.tar
 ```
 wsl -d fedora
 ```
+https://youtu.be/CWpeEuPbzMI
