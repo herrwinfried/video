@@ -8,16 +8,16 @@
 
 [WSL Preview Microsoft Store](https://aka.ms/wslstorepage)
 
-İki yöntem var kaldırmak için
+İki yöntem var özellik yüklemek için
 
-## A)Hangi Özelliği Kaldırmalısınız?
+## A)Hangi Özelliği Aktif Etmelisiniz?
 
-- Windows Subsystem for linux
+- Sanal Makine Platform
 
 ## B)PowerShell yazmanız gereken komutlar
 
 ```
-dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-https://youtu.be/Nt6cwJ8qqKU
+https://youtu.be/1l03F5DBes0
