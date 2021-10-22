@@ -1,44 +1,56 @@
-# Windows 11'e [Beta] Windows Subsystem for Android yükleme
+# Windows 11'e [Beta] WSA Aurora Store ve Termux yükleme
 
 ## Linkler
-- [https://store.rg-adguard.net/](https://store.rg-adguard.net/)
 
-- [https://www.microsoft.com/store/productId/9P3395VX91NR9](https://www.microsoft.com/store/productId/9P3395VX91NR)
-
-### Adguard Sayfasında yapılması gerekenler
-
-1. İlk Button URL olarak seçtiğinizden emin olun
-
-2. doldurulması gereken forma https://www.microsoft.com/store/productId/9P3395VX91NR yazdığınızdan emin olun.
-
-3. RP yerine Slow seçili olduğundan emin olun
-
-.msixbundle dosyasını bulun `örnek: MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral_~_8wekyb3d8bbwe.msixbundle`
-
-yaklaşık 1.20+ GB olduğundan emin olun.
+- [ADB İndirme Yeri](https://developer.android.com/studio/releases/platform-tools)
+- [Aurora Store İndirme Sayfası](https://auroraoss.com/download/)
+- [Aurora Store files sayfası](https://files.auroraoss.com/AuroraStore/Stable/)
 
 
-### Dosyayı İndirdikten sonra yapılması gerekenler
+- [platform-tools-latest-windows.zip{ADB} Direkt İndir](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+- [AuroraStore_4.0.7.apk Direkt İndir](https://files.auroraoss.com/AuroraStore/Stable/AuroraStore_4.0.7.apk)
+> video izleyerek yapmanızı öneririm karışk gelebilir yöntemler.
 
-Windows Terminali Yönetici Olarak çalıştırın ve Powershell seçiniz.
+### WSA açık olması gerekenler
+ - Geliştirici Modu(Developer Mode)
 
-> __**Dikkat!** Powershell 7 kullanıyorsanız öncesinde__
+### ADB için yapmamız gerekenler
+"platform-tools-latest-windows.zip"  Tümüne ayıkla diyip çıkartıyoruz 
+
+daha sonra klasörün içine girip adb uygulamasın olduğu yerde sağ tık yapıp windows terminal ile aç diyoruz
+
+daha sonra WSA 'daki Geliştirici Modu(Developer mode) altındaki "Geliştirici Ayarları Yönetme" Basıyoruz 
+
+ve oradanda "Kablosuz Hata Ayıklama" Tıklıyoruz Ordaki Yazan IP Adresimizi not alalım
+> Örn: 192.168.1.1:5555 yazıyorsa 192.168.1.1 kısmını not alın.
+
+Terminalimize dönüp Powershell 7 veya Windows Powershell'e
+> cmd ile açarsanız `.\adb` değil `adb` yazmalısınız.
+
+> **Örnek** `.\adb connect 192.168.1.1`
 ```
-Import-Module -Name Appx -UseWIndowsPowershell 
+.\adb connect IPadres
 ```
-> komutunu yazmalısınız. Eğer Powershell 7 kullanmıyorsanız zaten pencere adıda değiştirmediyseniz Windows Powershell olarak gözükcektir Windows Powershell ise gerek yoktur.
-ardından indirdiğiniz yere gidin.
+> hata verirse kapatıp terminali yeniden deneyin already veya başarılı yazısı görmeniz gerekiyor. bağlı cihazları kontrol etmek için `.\adb devices`
 
-
-> indirilenler klasörüne yüklediyseniz tahminen `cd .\Downloads\`
+## APK Yükleme && Aurora Store yükleme
+> örnek: Bende Masaüstümde win klasörümün içinde yüklü aurora store Hesabımın adıda winfried ` .\adb install "C:\Users\winfried\desktop\win\AuroraStore_4.0.7.apk` şeklinde yolu izlemem gerekir.
 ```
-cd .\Desktop\
-```
-
-Daha Sonra dosyamızı yüklememiz gerekiyor
-> Örnek: `Add-AppxPackage .\DOSYAADI.Msixbundle`
-```
-Add-AppxPackage .\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle
+.\adb install "DosyanınTamYolu\Dosyaadi.uzantısı
 ```
 
-https://youtu.be/1YzlmSRS8O0
+### Termux kurulumu
+
+Aurora store kurduktan sonra içinden termux indirip yükliyebilirsiniz.
+
+> Termux ta pkg update yaparken yasak diye forbidden diye yani hata alırsanız. yazmanız gereken komut termuxa
+```
+rm ../usr/etc/apt/sources.list.d/*
+```
+
+### Termux neofetch yükleme
+
+```
+pkg install neofetch
+```
+https://youtu.be/_mpvONtMv8k
