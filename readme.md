@@ -1,5 +1,11 @@
 # Windows 11'e [Beta] Windows Subsystem for Android yükleme
 
+> "Sanal Makine Platform" Özelliği Aktif Olması Gereklidir.Windows Terminalizi Yönetici Olarak Çalıştırın.
+> 
+> ```
+> dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+> ```
+
 ## Linkler
 - [https://store.rg-adguard.net/](https://store.rg-adguard.net/)
 
