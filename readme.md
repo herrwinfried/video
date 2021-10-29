@@ -1,13 +1,7 @@
-# OpenSUSE Tumbleweed ZSH ve OhMyZsh Yükleme
+# OpenSUSE Tumbleweed Flatpak Yükleme
 
-## zsh ve ohmyzsh kodu
 ```
-sudo zypper --gpg-auto-import-keys install -y zsh wget curl git && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-## ohmyzsh kodu 
-```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo zypper --gpg-auto-import-keys install -y flatpak && sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-https://youtu.be/tlzBTrLcKnc
+https://youtu.be/8qy5BnWzIaI
