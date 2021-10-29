@@ -1,7 +1,15 @@
-# OpenSUSE Tumbleweed Codecs Yükleme
+# OpenSUSE Tumbleweed Nvidia Driver yükleme
 
+##Nvidia G05
+> GeForce 600 serisi ve daha yenisi için NVIDIA grafik sürücüsü
 ```
-sudo zypper --gpg-auto-import-keys addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman && sudo zypper --gpg-auto-import-keys refresh && sudo zypper --gpg-auto-import-keys dist-upgrade --from packman --allow-vendor-change && sudo zypper --gpg-auto-import-keys install -y --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full vlc-codecs
+sudo zypper --gpg-auto-import-keys addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper --gpg-auto-import-keys ref && sudo zypper --gpg-auto-import-keys in x11-video-nvidiaG05 nvidia-glG05
 ```
 
-https://youtu.be/ps7ktIywYwI
+##Nvidia G04
+> GeForce 400 serisi ve daha yenisi için NVIDIA grafik sürücüsü
+```
+sudo zypper --gpg-auto-import-keys addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper --gpg-auto-import-keys ref && sudo zypper --gpg-auto-import-keys in x11-video-nvidiaG04 nvidia-glG04
+```
+
+https://youtu.be/Hjm5f9sj-rs
