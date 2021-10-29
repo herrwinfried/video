@@ -1,6 +1,13 @@
-# OpenSUSE Tumbleweed Chrome Yükleme
+# OpenSUSE Tumbleweed ZSH ve OhMyZsh Yükleme
+
+## zsh ve ohmyzsh kodu
 ```
-sudo zypper --gpg-auto-import-keys install -y wget && wget https://dl.google.com/linux/linux_signing_key.pub && sudo rpm --import linux_signing_key.pub && wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm -O google-chrome-stable_current_x86_64.rpm && sudo zypper --gpg-auto-import-keys ref && sudo zypper --gpg-auto-import-keys in -y ./google-chrome-stable_current_x86_64.rpm
+sudo zypper --gpg-auto-import-keys install -y zsh wget curl git && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-https://youtu.be/oc9FOQSZClg
+## ohmyzsh kodu 
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+https://youtu.be/tlzBTrLcKnc
